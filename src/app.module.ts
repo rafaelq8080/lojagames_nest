@@ -1,11 +1,10 @@
 import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import { CategoriaModule } from './categoria/categoria.module';
-import { Categoria } from './categoria/entities/categoria.entity';
-import { Produto } from './produto/entities/produto.entity';
-import { ProdutoModule } from './produto/produto.module';
 import { ConfigModule } from '@nestjs/config';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { AppController } from './app.controller';
+import { CategoriaModule } from './categoria/categoria.module';
 import { ProdService } from './data/services/prod.service';
+import { ProdutoModule } from './produto/produto.module';
 
 @Module({
   imports: [
@@ -17,7 +16,7 @@ import { ProdService } from './data/services/prod.service';
     ProdutoModule,
     CategoriaModule
   ],
-  controllers: [],
+  controllers: [AppController],
   providers: [],
 })
 export class AppModule {}
