@@ -15,8 +15,7 @@ export class Produto {
     @Column({ length: 255, nullable: false })
     nome: string
 
-   @ApiProperty() 
-    @IsNotEmpty()
+    @ApiProperty() 
     @Column({ type: "decimal", precision: 10, scale: 2 })
     preco: number
 
