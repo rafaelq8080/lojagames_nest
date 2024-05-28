@@ -16,7 +16,6 @@ export class Produto {
     nome: string
 
     @ApiProperty() 
-    @IsNumber({maxDecimalPlaces: 2})
     @IsNotEmpty()
     @Column({ type: "decimal", precision: 10, scale: 2 })
     preco: number
