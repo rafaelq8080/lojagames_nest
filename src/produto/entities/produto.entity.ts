@@ -15,13 +15,13 @@ export class Produto {
     @Column({ length: 255, nullable: false })
     nome: string
 
-    @ApiProperty() 
+   @ApiProperty() 
     @IsNotEmpty()
     @Column({ type: "decimal", precision: 10, scale: 2 })
     preco: number
 
     @ApiProperty() 
-    @Column()
+    @Column({ length: 5000, nullable: true })
     foto: string
 
     @ApiProperty({ type: () => Categoria }) 
