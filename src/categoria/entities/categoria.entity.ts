@@ -12,7 +12,7 @@ export class Categoria {
 
     @ApiProperty() 
     @IsNotEmpty()
-    @Column({length: 100, nullable: false})
+    @Column({type:"varchar", length: 100, nullable: false})
     tipo: string
 
     @ApiProperty() 

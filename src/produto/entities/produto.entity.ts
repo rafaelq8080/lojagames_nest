@@ -12,15 +12,15 @@ export class Produto {
 
     @ApiProperty() 
     @IsNotEmpty()
-    @Column({ length: 255, nullable: false })
+    @Column({ type:"varchar", length: 255, nullable: false })
     nome: string
 
     @ApiProperty() 
-    @Column({ type: "numeric", precision: 10, scale: 2 })
+    @Column({ type: "decimal", precision: 10, scale: 2 })
     preco: number
 
     @ApiProperty() 
-    @Column({ length: 5000, nullable: true })
+    @Column({ type:"varchar", length: 5000, nullable: true })
     foto: string
 
     @ApiProperty({ type: () => Categoria }) 
